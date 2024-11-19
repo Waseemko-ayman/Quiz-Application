@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  },
+  {
+    "title": "Is <img> Element Has Attribute href",
+    "answer_1": "Yes",
+    "answer_2": "No Its For Anchor Tag <a>",
+    "answer_3": "All Elements Has This Attribute",
+    "answer_4": "Answer 1 and 3 Is Right",
+    "right_answer": "No Its For Anchor Tag <a>"
+  },
+  {
+    "title": "How Can We Make Element Text Bold",
+    "answer_1": "Putting It Inside <b> Tag",
+    "answer_2": "Putting It Inside <strong> Tag",
+    "answer_3": "Customizing It With Font Weight Property In CSS",
+    "answer_4": "All Answer Is Right",
+    "right_answer": "All Answer Is Right"
+  },
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  },
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  },
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  },
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  },
+  {
+    "title": "Why We Use <br> Element",
+    "answer_1": "To Make Text Bold",
+    "answer_2": "To Make Text Italic",
+    "answer_3": "To Add Breakline",
+    "answer_4": "To Add Horizontal Line",
+    "right_answer": "To Add Breakline"
+  }
+]

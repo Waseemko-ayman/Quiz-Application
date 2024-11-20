@@ -129,6 +129,5 @@ function checkAnswer(rAnswer, count) {
 
   if (rAnswer === theChoosenAnswer) {
     rightAnswer++;
-    console.log("Good Answer");
   }
 }

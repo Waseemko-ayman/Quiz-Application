@@ -174,10 +174,7 @@ function handleBullets() {
 function showResult(count) {
   let theResult;
   if (currentIndex === count) {
-    questionArea.remove();
-    answersArea.remove();
-    submitButton.remove();
-    bullets.remove();
+    remove();
 
     if (rightAnswer > (count / 2) && rightAnswer < count) {
       theResult = `<span class="good">Good</span>, ${rightAnswer} From ${count} Is Good.`;
@@ -214,4 +211,12 @@ function countdown(duration, count) {
 
     }, 1000);
   }
+}
+
+/* =============================== Remove Elements Function =============================== */
+function remove() {
+  questionArea.remove();
+  answersArea.remove();
+  submitButton.remove();
+  bullets.remove();
 }

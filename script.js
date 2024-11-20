@@ -3,9 +3,13 @@ let countSpan = document.querySelector(".quiz-info .count span");
 let bulletsSpanContainer = document.querySelector(".bullets .spans");
 let questionArea = document.querySelector(".quiz-area");
 let answersArea = document.querySelector(".answers-area");
+let submitButton = document.querySelector(".submit-button");
+
+// Set options
+let currentIndex = 0;
+let rightAnswer = 0;
 
 /* ============================= Create Get Data Function ============================= */
-let currentIndex = 0;
 async function getQuestions() {
   try {
     let data = await fetch("html_questions.json");
@@ -18,6 +22,19 @@ async function getQuestions() {
 
     // Add Question Data
     addQuestionData(questionsObject[currentIndex], qCount);
+
+    // Click on Submit
+    submitButton.addEventListener("click", () => {
+      // Get Right Answer
+      let theRightAnswer = questionsObject[currentIndex].right_answer;
+
+      // Increase Index
+      currentIndex++;
+
+      // Check The Answer
+      checkAnswer(theRightAnswer, qCount);
+    })
+
   } catch (error) {
     console.log(error);
   }
@@ -96,5 +113,22 @@ function addQuestionData(obj, count) {
 
     // Add All Divs To Answers Area
     answersArea.appendChild(mainDiv);
+  }
+}
+
+/* ========================== Check The Right answer Function ======================== */
+function checkAnswer(rAnswer, count) {
+  let answers = document.getElementsByName("question");
+  let theChoosenAnswer;
+
+  for (let i = 0; i < answers.length; i++) {
+    if (answers[i].checked) {
+      theChoosenAnswer = answers[i].dataset.answer;
+    }
+  }
+
+  if (rAnswer === theChoosenAnswer) {
+    rightAnswer++;
+    console.log("Good Answer");
   }
 }

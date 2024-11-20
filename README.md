@@ -24,7 +24,7 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 ## Installation:
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/your-username/Age-Calculator.git
+git clone https://github.com/your-username/Quiz-Application.git
 ```
 Open `index.html` in your browser to test yourself.
 

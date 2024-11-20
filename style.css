@@ -101,3 +101,98 @@ body {
 .quiz-app .results span.perfect {
   color: #0075ff;
 }
+
+/* =================================== Media Query =================================== */
+@media (max-width: 576px) {
+  .quiz-app {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .quiz-app .quiz-info {
+    flex-direction: column;
+  }
+
+  .quiz-app :is(.quiz-info, .quiz-info .count) {
+    text-align: center;
+  }
+
+  .quiz-app .quiz-info :is(.category, .count) {
+    flex: none;
+    margin: 5px 0;
+  }
+
+  .quiz-app .quiz-area h2 {
+    font-size: 20px;
+  }
+
+  .quiz-app .submit-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .quiz-app .bullets .spans span {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .quiz-app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .quiz-app .submit-button {
+    font-size: 17px;
+  }
+
+  .quiz-app .answers-area .answer label {
+    font-size: 13px;
+  }
+
+  .quiz-app .bullets .spans span {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .quiz-app {
+    width: 80%;
+  }
+
+  .quiz-app .submit-button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .quiz-app .answers-area .answer label {
+    font-size: 14px;
+  }
+
+  .quiz-app .bullets .spans span {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .quiz-app {
+    width: 800px;
+  }
+
+  .quiz-app .submit-button {
+    font-size: 18px;
+  }
+
+  .quiz-app .answers-area .answer label {
+    font-size: 15px;
+  }
+
+  .quiz-app .bullets .spans span {
+    width: 20px;
+    height: 20px;
+  }
+}

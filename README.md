@@ -24,6 +24,7 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 - View results after the last question.
 
 ![screencapture-127-0-0-1-5500-index-html-2024-11-20-17_13_46](https://github.com/user-attachments/assets/61549613-7b75-4937-9b2f-e3e2f687c173)
+![screencapture-127-0-0-1-5500-index-html-2024-11-20-17_14_03](https://github.com/user-attachments/assets/97e16d62-cc5e-458b-b98e-0c977c9e4bc9)
 
 ## Installation:
 Clone the repository to your local machine:

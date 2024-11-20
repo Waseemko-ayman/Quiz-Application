@@ -28,7 +28,7 @@ async function getQuestions() {
     addQuestionData(questionsObject[currentIndex], qCount);
 
     // Start CountDown
-    countdown(5, qCount);
+    countdown(3, qCount);
 
     // Click on Submit
     submitButton.addEventListener("click", () => {
@@ -50,6 +50,10 @@ async function getQuestions() {
 
       // Handle Bullets Classes
       handleBullets();
+
+      // Start CountDown
+      clearInterval(countdownInterval);
+      countdown(3, qCount);
 
       // Show Result
       showResult(qCount);
@@ -205,6 +209,7 @@ function countdown(duration, count) {
 
       if (--duration < 0) {
         clearInterval(countdownInterval);
+        submitButton.click();
       }
 
     }, 1000);

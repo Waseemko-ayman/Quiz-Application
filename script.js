@@ -33,6 +33,16 @@ async function getQuestions() {
 
       // Check The Answer
       checkAnswer(theRightAnswer, qCount);
+
+      // Remove Previous Question
+      questionArea.innerHTML = "";
+      answersArea.innerHTML = "";
+
+      // Add Question Data
+      addQuestionData(questionsObject[currentIndex], qCount);
+
+      // Handle Bullets Classes
+      handleBullets();
     })
 
   } catch (error) {
@@ -64,7 +74,7 @@ function createBullets(num) {
 function addQuestionData(obj, count) {
   // Create H2 Question Title
   let questionTitle = document.createElement("h2");
-  
+
   // Create Question Text
   let questionText = document.createTextNode(obj.title);
 
@@ -130,4 +140,16 @@ function checkAnswer(rAnswer, count) {
   if (rAnswer === theChoosenAnswer) {
     rightAnswer++;
   }
+}
+
+/* ============================= Handle Bullets Function ============================= */
+function handleBullets() {
+  let bulletsSpans = document.querySelectorAll(".bullets .spans span");
+  let arrayOfSpans = Array.from(bulletsSpans);
+
+  arrayOfSpans.forEach((span, index) => {
+    if (currentIndex === index) {
+      span.classList.add("on");
+    }
+  })
 }

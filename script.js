@@ -2,6 +2,7 @@
 let countSpan = document.querySelector(".quiz-info .count span");
 let bulletsSpanContainer = document.querySelector(".bullets .spans");
 let questionArea = document.querySelector(".quiz-area");
+let answersArea = document.querySelector(".answers-area");
 
 /* ============================= Create Get Data Function ============================= */
 let currentIndex = 0;
@@ -71,5 +72,24 @@ function addQuestionData(obj, count) {
     radioInput.type = "radio";
     radioInput.id = `answer_${i}`;
     radioInput.dataset.answer = obj[`answer_${i}`];
+
+    // Create Label
+    let theLabel = document.createElement("label");
+
+    // Add For Attribute
+    theLabel.htmlFor = `answer_${i}`;
+
+    // Create Lable Text
+    let theLabelText = document.createTextNode(obj[`answer_${i}`]);
+
+    // Add The Text To Label
+    theLabel.appendChild(theLabelText);
+
+    // Add input + Label To Main Div
+    mainDiv.appendChild(radioInput);
+    mainDiv.appendChild(theLabel);
+
+    // Add All Divs To Answers Area
+    answersArea.appendChild(mainDiv);
   }
 }

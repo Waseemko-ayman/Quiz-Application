@@ -1,4 +1,5 @@
 /* ================================== Select Element ================================== */
+let categorys = document.querySelector(".categorys .category");
 let countSpan = document.querySelector(".quiz-info .count span");
 let bullets = document.querySelector(".bullets");
 let bulletsSpanContainer = document.querySelector(".bullets .spans");
@@ -17,15 +18,39 @@ let countdownInterval;
 async function getQuestions() {
   try {
     let data = await fetch("html_questions.json");
-    let questionsObject = await data.json();
+    let questionsObjects = await data.json();
+    console.log(questionsObjects);
+
+    // Get the keys to Questions Objects
+    let questionsObjectsKeys = Object.keys(questionsObjects);
+
+    for (let i = 0; i < questionsObjectsKeys.length; i++) {
+      
+      // Create Button
+      let categoryButton = document.createElement("button");
+      // Add Data Attribute + innerHTML
+      categoryButton.dataset.category = questionsObjectsKeys[i];
+      categoryButton.innerHTML = questionsObjectsKeys[i];
+
+      // Add Button To Categorys Div
+      categorys.appendChild(categoryButton);
+    }
+
+    let theCategorysBtn = document.querySelectorAll(".categorys .category button");
+    theCategorysBtn.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        console.log(e.currentTarget.dataset.category);
+      })
+    })
+
     // Questions Count
-    let qCount = questionsObject.length;
+    let qCount = questionsObjects.length;
 
     // Create Bullets + Set Questions Count
     createBullets(qCount);
 
     // Add Question Data
-    addQuestionData(questionsObject[currentIndex], qCount);
+    addQuestionData(questionsObjects[currentIndex], qCount);
 
     // Start CountDown
     countdown(3, qCount);
@@ -33,7 +58,7 @@ async function getQuestions() {
     // Click on Submit
     submitButton.addEventListener("click", () => {
       // Get Right Answer
-      let theRightAnswer = questionsObject[currentIndex].right_answer;
+      let theRightAnswer = questionsObjects[currentIndex].right_answer;
 
       // Increase Index
       currentIndex++;
@@ -46,7 +71,7 @@ async function getQuestions() {
       answersArea.innerHTML = "";
 
       // Add Question Data
-      addQuestionData(questionsObject[currentIndex], qCount);
+      addQuestionData(questionsObjects[currentIndex], qCount);
 
       // Handle Bullets Classes
       handleBullets();

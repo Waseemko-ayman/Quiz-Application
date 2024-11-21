@@ -1,74 +1,248 @@
-[
-  {
-    "title": "Why We Use <br> Element",
-    "answer_1": "To Make Text Bold",
-    "answer_2": "To Make Text Italic",
-    "answer_3": "To Add Breakline",
-    "answer_4": "To Add Horizontal Line",
-    "right_answer": "To Add Breakline"
-  },
-  {
-    "title": "Is <img> Element Has Attribute href",
-    "answer_1": "Yes",
-    "answer_2": "No Its For Anchor Tag <a>",
-    "answer_3": "All Elements Has This Attribute",
-    "answer_4": "Answer 1 and 3 Is Right",
-    "right_answer": "No Its For Anchor Tag <a>"
-  },
-  {
-    "title": "How Can We Make Element Text Bold",
-    "answer_1": "Putting It Inside <b> Tag",
-    "answer_2": "Putting It Inside <strong> Tag",
-    "answer_3": "Customizing It With Font Weight Property In CSS",
-    "answer_4": "All Answer Is Right",
-    "right_answer": "All Answer Is Right"
-  },
-  {
-    "title": "What Is The Right Hierarchy For Creating Part Of Page",
-    "answer_1": "<h2> Then <p> Then <h1> Then <p> Then <h3> Then <p> Then <img>",
-    "answer_2": "<h1> Then <p> Then <h3> Then <p> Then <h2> Then <p> Then <img>",
-    "answer_3": "<h2> Then <p> Then <h3> Then <p> Then <h1> Then <p> Then <img>",
-    "answer_4": "All Solutions Is Wrong",
-    "right_answer": "All Solutions Is Wrong"
-  },
-  {
-    "title": "How Can We Include External Page Inside Our HTML Page",
-    "answer_1": "By Using Include In HTML",
-    "answer_2": "By Using Load In HTML",
-    "answer_3": "By Using iframe Tag",
-    "answer_4": "All Solutions Is Wrong",
-    "right_answer": "By Using iframe Tag"
-  },
-  {
-    "title": "What Is The Tag That Not Exists in HTML",
-    "answer_1": "<object>",
-    "answer_2": "<basefont>",
-    "answer_3": "<abbr>",
-    "answer_4": "All Tags Is Exists in HTML",
-    "right_answer": "All Tags Is Exists in HTML"
-  },
-  {
-    "title": "How We Specify Document Type Of HTML5 Page",
-    "answer_1": "<DOCTYPE html>",
-    "answer_2": "<DOCTYPE html5>",
-    "answer_3": "<!DOCTYPE html5>",
-    "answer_4": "<!DOCTYPE html>",
-    "right_answer": "<!DOCTYPE html>"
-  },
-  {
-    "title": "What Is The Element Thats Not Exists in HTML5 Semantics",
-    "answer_1": "<article>",
-    "answer_2": "<section>",
-    "answer_3": "<blockqoute>",
-    "answer_4": "<aside>",
-    "right_answer": "<blockqoute>"
-  },
-  {
-    "title": "In HTML Can We Use This Way To Add Attributes",
-    "answer_1": "<div class='class-name'>",
-    "answer_2": "<div class=class-name>",
-    "answer_3": "<div class=\"class-name\">",
-    "answer_4": "All Is Right",
-    "right_answer": "All Is Right"
-  }
-]
+{
+  "HTML": [
+    {
+      "title": "Why We Use <br> Element",
+      "answer_1": "To Make Text Bold",
+      "answer_2": "To Make Text Italic",
+      "answer_3": "To Add Breakline",
+      "answer_4": "To Add Horizontal Line",
+      "right_answer": "To Add Breakline"
+    },
+    {
+      "title": "Is <img> Element Has Attribute href",
+      "answer_1": "Yes",
+      "answer_2": "No Its For Anchor Tag <a>",
+      "answer_3": "All Elements Has This Attribute",
+      "answer_4": "Answer 1 and 3 Is Right",
+      "right_answer": "No Its For Anchor Tag <a>"
+    },
+    {
+      "title": "How Can We Make Element Text Bold",
+      "answer_1": "Putting It Inside <b> Tag",
+      "answer_2": "Putting It Inside <strong> Tag",
+      "answer_3": "Customizing It With Font Weight Property In CSS",
+      "answer_4": "All Answer Is Right",
+      "right_answer": "All Answer Is Right"
+    },
+    {
+      "title": "What Is The Right Hierarchy For Creating Part Of Page",
+      "answer_1": "<h2> Then <p> Then <h1> Then <p> Then <h3> Then <p> Then <img>",
+      "answer_2": "<h1> Then <p> Then <h3> Then <p> Then <h2> Then <p> Then <img>",
+      "answer_3": "<h2> Then <p> Then <h3> Then <p> Then <h1> Then <p> Then <img>",
+      "answer_4": "All Solutions Is Wrong",
+      "right_answer": "All Solutions Is Wrong"
+    },
+    {
+      "title": "How Can We Include External Page Inside Our HTML Page",
+      "answer_1": "By Using Include In HTML",
+      "answer_2": "By Using Load In HTML",
+      "answer_3": "By Using iframe Tag",
+      "answer_4": "All Solutions Is Wrong",
+      "right_answer": "By Using iframe Tag"
+    },
+    {
+      "title": "What Is The Tag That Not Exists in HTML",
+      "answer_1": "<object>",
+      "answer_2": "<basefont>",
+      "answer_3": "<abbr>",
+      "answer_4": "All Tags Is Exists in HTML",
+      "right_answer": "All Tags Is Exists in HTML"
+    },
+    {
+      "title": "How We Specify Document Type Of HTML5 Page",
+      "answer_1": "<DOCTYPE html>",
+      "answer_2": "<DOCTYPE html5>",
+      "answer_3": "<!DOCTYPE html5>",
+      "answer_4": "<!DOCTYPE html>",
+      "right_answer": "<!DOCTYPE html>"
+    },
+    {
+      "title": "What Is The Element Thats Not Exists in HTML5 Semantics",
+      "answer_1": "<article>",
+      "answer_2": "<section>",
+      "answer_3": "<blockqoute>",
+      "answer_4": "<aside>",
+      "right_answer": "<blockqoute>"
+    },
+    {
+      "title": "In HTML Can We Use This Way To Add Attributes",
+      "answer_1": "<div class='class-name'>",
+      "answer_2": "<div class=class-name>",
+      "answer_3": "<div class=\"class-name\">",
+      "answer_4": "All Is Right",
+      "right_answer": "All Is Right"
+    },
+    {
+      "title": "What Is The Correct Syntax To Add A Favicon In HTML",
+      "answer_1": "<link rel=\"icon\" href=\"favicon.ico\">",
+      "answer_2": "<link icon=\"favicon\" src=\"favicon.ico\">",
+      "answer_3": "<meta favicon=\"icon\" href=\"favicon.ico\">",
+      "answer_4": "<favicon src=\"favicon.ico\">",
+      "right_answer": "<link rel=\"icon\" href=\"favicon.ico\">"
+    }
+  ],
+  "CSS": [
+    {
+      "title": "What does CSS stand for?",
+      "answer_1": "Creative Style Sheets",
+      "answer_2": "Cascading Style Sheets",
+      "answer_3": "Colorful Style Sheets",
+      "answer_4": "Computer Style Sheets",
+      "right_answer": "Cascading Style Sheets"
+    },
+    {
+      "title": "Which property is used to change the text color?",
+      "answer_1": "font-color",
+      "answer_2": "text-color",
+      "answer_3": "color",
+      "answer_4": "background-color",
+      "right_answer": "color"
+    },
+    {
+      "title": "Which CSS property controls the font size?",
+      "answer_1": "font-size",
+      "answer_2": "text-size",
+      "answer_3": "size",
+      "answer_4": "font-style",
+      "right_answer": "font-size"
+    },
+    {
+      "title": "How do you make the text bold in CSS?",
+      "answer_1": "font-weight: light;",
+      "answer_2": "font-weight: bold;",
+      "answer_3": "text-style: bold;",
+      "answer_4": "font-bold: true;",
+      "right_answer": "font-weight: bold;"
+    },
+    {
+      "title": "Which property is used to change the background color?",
+      "answer_1": "color",
+      "answer_2": "background-color",
+      "answer_3": "bg-color",
+      "answer_4": "background",
+      "right_answer": "background-color"
+    },
+    {
+      "title": "Which unit is NOT relative in CSS?",
+      "answer_1": "em",
+      "answer_2": "rem",
+      "answer_3": "px",
+      "answer_4": "%",
+      "right_answer": "px"
+    },
+    {
+      "title": "What does the z-index property control?",
+      "answer_1": "Font size",
+      "answer_2": "Element stacking order",
+      "answer_3": "Position",
+      "answer_4": "Opacity",
+      "right_answer": "Element stacking order"
+    },
+    {
+      "title": "Which property adds space inside an element?",
+      "answer_1": "margin",
+      "answer_2": "padding",
+      "answer_3": "border",
+      "answer_4": "width",
+      "right_answer": "padding"
+    },
+    {
+      "title": "How do you apply a class to an element in CSS?",
+      "answer_1": ".classname",
+      "answer_2": "#classname",
+      "answer_3": "classname",
+      "answer_4": "*classname",
+      "right_answer": ".classname"
+    },
+    {
+      "title": "Which property is used to make an element's corners rounded?",
+      "answer_1": "border-radius",
+      "answer_2": "corner-radius",
+      "answer_3": "round-corners",
+      "answer_4": "border-style",
+      "right_answer": "border-radius"
+    }
+  ],
+  "JS": [
+    {
+      "title": "What is JavaScript mainly used for?",
+      "answer_1": "Styling the webpage",
+      "answer_2": "Adding interactivity",
+      "answer_3": "Creating the structure",
+      "answer_4": "Managing databases",
+      "right_answer": "Adding interactivity"
+    },
+    {
+      "title": "Which type of data does 'null' represent?",
+      "answer_1": "Number",
+      "answer_2": "String",
+      "answer_3": "Undefined",
+      "answer_4": "Object",
+      "right_answer": "Object"
+    },
+    {
+      "title": "How do you write 'Hello, World!' in an alert box?",
+      "answer_1": "msg('Hello, World!')",
+      "answer_2": "alert('Hello, World!')",
+      "answer_3": "console.log('Hello, World!')",
+      "answer_4": "prompt('Hello, World!')",
+      "right_answer": "alert('Hello, World!')"
+    },
+    {
+      "title": "What keyword declares a variable in JavaScript?",
+      "answer_1": "let",
+      "answer_2": "var",
+      "answer_3": "const",
+      "answer_4": "All of the above",
+      "right_answer": "All of the above"
+    },
+    {
+      "title": "Which method is used to convert a string to an integer?",
+      "answer_1": "Number()",
+      "answer_2": "parseInt()",
+      "answer_3": "parseFloat()",
+      "answer_4": "toFixed()",
+      "right_answer": "parseInt()"
+    },
+    {
+      "title": "What is the correct syntax for a function in JavaScript?",
+      "answer_1": "function:myFunction()",
+      "answer_2": "function myFunction()",
+      "answer_3": "function = myFunction()",
+      "answer_4": "function => myFunction()",
+      "right_answer": "function myFunction()"
+    },
+    {
+      "title": "Which of the following is a loop in JavaScript?",
+      "answer_1": "for",
+      "answer_2": "while",
+      "answer_3": "do...while",
+      "answer_4": "All of the above",
+      "right_answer": "All of the above"
+    },
+    {
+      "title": "What is the output of 'typeof NaN'?",
+      "answer_1": "number",
+      "answer_2": "NaN",
+      "answer_3": "undefined",
+      "answer_4": "string",
+      "right_answer": "number"
+    },
+    {
+      "title": "How do you write a comment in JavaScript?",
+      "answer_1": "// This is a comment",
+      "answer_2": "# This is a comment",
+      "answer_3": "/* This is a comment */",
+      "answer_4": "Both // and /* */",
+      "right_answer": "Both // and /* */"
+    },
+    {
+      "title": "What does '===' check in JavaScript?",
+      "answer_1": "Value only",
+      "answer_2": "Type only",
+      "answer_3": "Value and Type",
+      "answer_4": "Neither value nor type",
+      "right_answer": "Value and Type"
+    }
+  ]
+}

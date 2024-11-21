@@ -1,4 +1,5 @@
 /* ================================== Select Element ================================== */
+let quizApp = document.querySelector(".quiz-app");
 let categorys = document.querySelector(".categorys .category");
 let countSpan = document.querySelector(".quiz-info .count span");
 let bullets = document.querySelector(".bullets");
@@ -13,82 +14,185 @@ let countdownElement = document.querySelector(".countdown");
 let currentIndex = 0;
 let rightAnswer = 0;
 let countdownInterval;
+let currentCategory;
+let activeCategory = null;
+let theCategorysBtn;
+
+function createQuizLayout() {
+  questionArea = document.createElement("div");
+  questionArea.classList.add("quiz-area");
+
+  answersArea = document.createElement("div");
+  answersArea.classList.add("answers-area");
+
+  submitButton = document.createElement("button");
+  submitButton.classList.add("submit-button");
+  submitButton.textContent = "Submit Answer";
+
+  bullets = document.createElement("div");
+  bullets.classList.add("bullets");
+
+  bulletsSpanContainer = document.createElement("div");
+  bulletsSpanContainer.classList.add("spans");
+
+  countdownElement = document.createElement("div");
+  countdownElement.classList.add("countdown");
+
+  resultContainer = document.createElement("div");
+  resultContainer.classList.add("results");
+
+  // Add Bullets Span Container To Bullets Div
+  bullets.appendChild(bulletsSpanContainer);
+
+  // Add Count Down Element To Bullets Div
+  bullets.appendChild(countdownElement);
+
+  // Add Quiz Area To Quiz App Div
+  quizApp.appendChild(questionArea);
+
+  // Add Answer Area To Quiz App Div
+  quizApp.appendChild(answersArea);
+
+  // Add Submit Button To Quiz App Div
+  quizApp.appendChild(submitButton);
+
+  // Add Bullets Div To Quiz App Div
+  quizApp.appendChild(bullets);
+
+  // Add Results To Quiz App Div
+  quizApp.appendChild(resultContainer);
+}
 
 /* ============================= Create Get Data Function ============================= */
 async function getQuestions() {
   try {
     let data = await fetch("html_questions.json");
     let questionsObjects = await data.json();
-    console.log(questionsObjects);
 
-    // Get the keys to Questions Objects
-    let questionsObjectsKeys = Object.keys(questionsObjects);
+    // Create Category
+    createCategorys(questionsObjects);
 
-    for (let i = 0; i < questionsObjectsKeys.length; i++) {
-      
-      // Create Button
-      let categoryButton = document.createElement("button");
-      // Add Data Attribute + innerHTML
-      categoryButton.dataset.category = questionsObjectsKeys[i];
-      categoryButton.innerHTML = questionsObjectsKeys[i];
+    theCategorysBtn = document.querySelectorAll(".categorys .category button");
 
-      // Add Button To Categorys Div
-      categorys.appendChild(categoryButton);
-    }
-
-    let theCategorysBtn = document.querySelectorAll(".categorys .category button");
     theCategorysBtn.forEach((button) => {
       button.addEventListener("click", (e) => {
-        console.log(e.currentTarget.dataset.category);
-      })
-    })
 
-    // Questions Count
-    let qCount = questionsObjects.length;
+        // Check for results
+        if (resultContainer && resultContainer.innerHTML !== "") {
+          resultContainer.innerHTML = "";
+          resultContainer.style.padding = "";
+          resultContainer.style.marginTop = "";
+          resultContainer.style.backgroundColor = "";
+        }
 
-    // Create Bullets + Set Questions Count
-    createBullets(qCount);
+        // Check if the structure has already been created.
+        if (!document.querySelector(".quiz-area")) {
+          createQuizLayout(); // Create the structure only if it does not exist
+        }
 
-    // Add Question Data
-    addQuestionData(questionsObjects[currentIndex], qCount);
+        // Remove Checked Class From All buttons
+        theCategorysBtn.forEach((button) => {
+          button.classList.remove("checked");
+        });
 
-    // Start CountDown
-    countdown(3, qCount);
+        // Add Checked Class To The Clicked Button
+        button.classList.add("checked");
 
-    // Click on Submit
-    submitButton.addEventListener("click", () => {
-      // Get Right Answer
-      let theRightAnswer = questionsObjects[currentIndex].right_answer;
+        // Remove all categories except the selected ones.
+        theCategorysBtn.forEach((button) => {
+          if (!button.classList.contains("checked")) {
+            button.style.display = "none";
+          }
+        });
 
-      // Increase Index
-      currentIndex++;
+        let selectedCategory = e.currentTarget.dataset.category;
 
-      // Check The Answer
-      checkAnswer(theRightAnswer, qCount);
+        if (activeCategory === selectedCategory) {
+          return;
+        }
 
-      // Remove Previous Question
-      questionArea.innerHTML = "";
-      answersArea.innerHTML = "";
+        // Update active class
+        activeCategory = selectedCategory;
+        currentIndex = 0;
 
-      // Add Question Data
-      addQuestionData(questionsObjects[currentIndex], qCount);
+        // Remove old questions and related information
+        clearPreviousQuestion();
 
-      // Handle Bullets Classes
-      handleBullets();
+        currentCategory = questionsObjects[selectedCategory];
 
-      // Start CountDown
-      clearInterval(countdownInterval);
-      countdown(3, qCount);
+        // Questions Count
+        let qCount = currentCategory.length;
 
-      // Show Result
-      showResult(qCount);
-    })
+        // Create Bullets + Set Questions Count
+        createBullets(qCount);
 
+        // Add Question Data
+        addQuestionData(currentCategory[currentIndex], qCount);
+
+        // Start CountDown
+        countdown(5, qCount);
+
+        // Click on Submit
+        submitButton.addEventListener("click", () => {
+          // Get Right Answer
+          let theRightAnswer = currentCategory[currentIndex].right_answer;
+
+          // Increase Index
+          currentIndex++;
+
+          // Check The Answer
+          checkAnswer(theRightAnswer, qCount);
+
+          // Remove Previous Question
+          questionArea.innerHTML = "";
+          answersArea.innerHTML = "";
+
+          // Add Question Data
+          addQuestionData(currentCategory[currentIndex], qCount);
+
+          // Handle Bullets Classes
+          handleBullets();
+
+          // Start CountDown
+          clearInterval(countdownInterval);
+          countdown(5, qCount);
+
+          // Show Result
+          showResult(qCount);
+        })
+      });
+    });
   } catch (error) {
     console.log(error);
   }
 }
 getQuestions();
+
+/* ================ Remove Old Questions & Related Information Function =============== */
+function clearPreviousQuestion() {
+  questionArea.innerHTML = ""; // Remove old question
+  answersArea.innerHTML = ""; // Remove old answers
+  bulletsSpanContainer.innerHTML = ""; // Remove old points
+  clearInterval(countdownInterval); // Stop the counter
+  currentIndex = 0; // Reset index
+}
+
+/* ================================ Categorys Function ================================ */
+function createCategorys(questionsObjects) {
+  // Get the keys to Questions Objects
+  let questionsObjectsKeys = Object.keys(questionsObjects);
+
+  for (let i = 0; i < questionsObjectsKeys.length; i++) {
+    // Create Button
+    let categoryButton = document.createElement("button");
+    // Add Data Attribute + innerHTML
+    categoryButton.dataset.category = questionsObjectsKeys[i];
+    categoryButton.innerHTML = questionsObjectsKeys[i];
+
+    // Add Button To Categorys Div
+    categorys.appendChild(categoryButton);
+  }
+}
 
 /* ============================ Create The Bullets Function =========================== */
 function createBullets(num) {
@@ -213,6 +317,11 @@ function showResult(count) {
     resultContainer.style.padding = "10px";
     resultContainer.style.marginTop = "10px";
     resultContainer.style.backgroundColor = "white";
+
+    theCategorysBtn.forEach((button) => {
+      button.style.display = "block";
+      button.classList.remove("checked");
+    });
   }
 }
 
@@ -238,10 +347,12 @@ function countdown(duration, count) {
   }
 }
 
-/* =============================== Remove Elements Function =============================== */
+/* ============================ Remove Elements Function ============================= */
 function remove() {
   questionArea.remove();
   answersArea.remove();
   submitButton.remove();
   bullets.remove();
 }
+
+// remove();

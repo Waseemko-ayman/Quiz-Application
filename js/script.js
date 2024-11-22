@@ -66,7 +66,7 @@ function createQuizLayout() {
 /* ============================= Create Get Data Function ============================= */
 async function getQuestions() {
   try {
-    let data = await fetch("html_questions.json");
+    let data = await fetch("../json/html_questions.json");
     let questionsObjects = await data.json();
 
     // Create Category
@@ -83,6 +83,7 @@ async function getQuestions() {
           resultContainer.style.padding = "";
           resultContainer.style.marginTop = "";
           resultContainer.style.backgroundColor = "";
+          rightAnswer = 0;
         }
 
         // Check if the structure has already been created.
@@ -354,5 +355,3 @@ function remove() {
   submitButton.remove();
   bullets.remove();
 }
-
-// remove();

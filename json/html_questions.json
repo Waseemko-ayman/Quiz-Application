@@ -74,8 +74,8 @@
     },
     {
       "title": "What Is The Correct Syntax To Add A Favicon In HTML",
-      "answer_1": "<link rel=\"icon\" href=\"favicon.ico\">",
-      "answer_2": "<link icon=\"favicon\" src=\"favicon.ico\">",
+      "answer_1": "<link icon=\"favicon\" src=\"favicon.ico\">",
+      "answer_2": "<link rel=\"icon\" href=\"favicon.ico\">",
       "answer_3": "<meta favicon=\"icon\" href=\"favicon.ico\">",
       "answer_4": "<favicon src=\"favicon.ico\">",
       "right_answer": "<link rel=\"icon\" href=\"favicon.ico\">"
@@ -100,9 +100,9 @@
     },
     {
       "title": "Which CSS property controls the font size?",
-      "answer_1": "font-size",
-      "answer_2": "text-size",
-      "answer_3": "size",
+      "answer_1": "text-size",
+      "answer_2": "size",
+      "answer_3": "font-size",
       "answer_4": "font-style",
       "right_answer": "font-size"
     },
@@ -148,17 +148,17 @@
     },
     {
       "title": "How do you apply a class to an element in CSS?",
-      "answer_1": ".classname",
-      "answer_2": "#classname",
-      "answer_3": "classname",
-      "answer_4": "*classname",
+      "answer_1": "#classname",
+      "answer_2": "classname",
+      "answer_3": "*classname",
+      "answer_4": ".classname",
       "right_answer": ".classname"
     },
     {
       "title": "Which property is used to make an element's corners rounded?",
-      "answer_1": "border-radius",
+      "answer_1": "round-corners",
       "answer_2": "corner-radius",
-      "answer_3": "round-corners",
+      "answer_3": "border-radius",
       "answer_4": "border-style",
       "right_answer": "border-radius"
     }
@@ -222,9 +222,9 @@
     },
     {
       "title": "What is the output of 'typeof NaN'?",
-      "answer_1": "number",
-      "answer_2": "NaN",
-      "answer_3": "undefined",
+      "answer_1": "NaN",
+      "answer_2": "undefined",
+      "answer_3": "number",
       "answer_4": "string",
       "right_answer": "number"
     },

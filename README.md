@@ -2,7 +2,7 @@
 
 This Quiz App is a dynamic, interactive application built using HTML, CSS, and JavaScript. It fetches questions from a JSON file and provides a user-friendly interface for answering them. The app includes a countdown timer, progress tracking through bullets, and results feedback.
 
-![screencapture-127-0-0-1-5500-index-html-2024-11-20-17_12_13](https://github.com/user-attachments/assets/e676f795-a64b-4902-a536-2aebdab5ec9c)
+![photo-1](https://github.com/user-attachments/assets/0421e586-a4c0-4f65-b218-88ce4ba71fed)
 
 ## Features:
 1. Question Data Fetching: Dynamically fetches questions from a JSON file.
@@ -15,7 +15,7 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 ## Technologies used:
 - HTML
 - CSS
-- JavaScript
+- JavaScript (with JSON Object)
 
 ## Usage
 - Start the quiz by reading the first question.
@@ -23,8 +23,8 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 - Progress through questions while monitoring the timer.
 - View results after the last question.
 
-![screencapture-127-0-0-1-5500-index-html-2024-11-20-17_13_46](https://github.com/user-attachments/assets/61549613-7b75-4937-9b2f-e3e2f687c173)
-![screencapture-127-0-0-1-5500-index-html-2024-11-20-17_14_03](https://github.com/user-attachments/assets/97e16d62-cc5e-458b-b98e-0c977c9e4bc9)
+![photo-2](https://github.com/user-attachments/assets/f0eed7d7-5b92-46e0-906f-4abb7f1ae6a5)
+![photo-3](https://github.com/user-attachments/assets/95970726-1bc9-4623-a22b-4342fae0d1bc)
 
 ## Installation:
 Clone the repository to your local machine:

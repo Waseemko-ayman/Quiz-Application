@@ -229,9 +229,24 @@ function addQuestionData(obj, count) {
     // Append The H2 To Question Area
     questionArea.appendChild(questionTitle);
 
-    // Create The Answers
-    for (let i = 1; i <= 4; i++) {
+    // Create an array containing the answers
+    let answers = [
+      obj.answer_1,
+      obj.answer_2,
+      obj.answer_3,
+      obj.answer_4,
+    ];
 
+    // Randomize the Elements By Fisher-Yates Shuffle Algorithm.
+    for (let i = answers.length - 1; i > 0; i--) {
+      let random = Math.floor(Math.random() * (i + 1));
+      [answers[i], answers[random]] = [answers[random], answers[i]];
+    }
+
+    let defaultSelectedIndex = Math.floor(Math.random() * answers.length);
+
+    // Create options based on the new order
+    answers.forEach((answer, index) => {
       // Create Main Answer Div
       let mainDiv = document.createElement("div");
       // Add Class To Main Div
@@ -242,22 +257,21 @@ function addQuestionData(obj, count) {
       // Add Type + name + id + Data Attribute
       radioInput.name = "question";
       radioInput.type = "radio";
-      radioInput.id = `answer_${i}`;
-      radioInput.dataset.answer = obj[`answer_${i}`];
+      radioInput.id = `answer_${index + 1}`;
+      radioInput.dataset.answer = answer;
 
-      // Make First Option Selected
-      if (i === 1) {
+      // Select a random option as the default
+      if (index === defaultSelectedIndex) {
         radioInput.checked = true;
       }
 
       // Create Label
       let theLabel = document.createElement("label");
-
       // Add For Attribute
-      theLabel.htmlFor = `answer_${i}`;
+      theLabel.htmlFor = `answer_${index + 1}`;
 
       // Create Lable Text
-      let theLabelText = document.createTextNode(obj[`answer_${i}`]);
+      let theLabelText = document.createTextNode(answer);
 
       // Add The Text To Label
       theLabel.appendChild(theLabelText);
@@ -268,7 +282,7 @@ function addQuestionData(obj, count) {
 
       // Add All Divs To Answers Area
       answersArea.appendChild(mainDiv);
-    }
+    });
   }
 }
 

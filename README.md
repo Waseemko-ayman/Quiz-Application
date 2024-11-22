@@ -15,7 +15,7 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 ## Technologies used:
 - HTML
 - CSS
-- JavaScript
+- JavaScript (with JSON Object)
 
 ## Usage
 - Start the quiz by reading the first question.

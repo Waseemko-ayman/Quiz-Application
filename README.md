@@ -19,7 +19,7 @@ This Quiz App is a dynamic, interactive application built using HTML, CSS, and J
 - JavaScript for dynamic behavior
 - JSON for storing questions and answers
 
-## Usage
+## Usage:
 - Start the quiz by reading the first question.
 - Select an answer and click Submit Answer.
 - Progress through questions while monitoring the timer.
